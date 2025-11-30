@@ -1,0 +1,221 @@
+ :root {
+            --bg-color: #0a0a0a;
+            --text-color: #f0f0f0;
+            --accent-color: #888;
+            --font-main: 'Courier New', Courier, monospace; /* 等幅フォントでLo-fi感を演出 */
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color:rgb(227, 225, 225);
+            color: grey;
+            font-family: var(--font-main);
+            line-height: 1.5;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: 0.3s;
+        }
+
+        a:hover {
+            border-bottom: 1px solid var(--text-color);
+            opacity: 0.8;
+        }
+
+        /* レイアウトコンテナ */
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* ヘッダー */
+        header {
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        .logo {
+            font-size: 3rem;
+            font-weight: bold;
+            letter-spacing: -0.05em; /* 文字を少し詰める */
+            margin-bottom: 10px;
+        }
+
+        .sns-icons {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            margin-bottom: 50px;
+            gap: 70px;
+        }
+
+        
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            gap: 30px;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+        }
+
+.video-wrapper {
+    display: grid;
+    
+    /* 2. 💡 3つの列を均等な幅 (1frずつ) で作成 */
+    grid-template-columns: 1fr 1fr 1fr; 
+    
+    /* 3. 要素間の隙間を設定 */
+    gap: 15px;         
+    
+    /* ページ中央寄せと最大幅の設定 */
+    margin: 40px auto; 
+    max-width: 900px;
+    overflow: hidden;
+}
+
+.video-item {
+    position: static !important; 
+    height: auto;
+    
+}
+
+.video-item iframe {
+    /* 親要素 (video-item) のサイズいっぱいに広がる */
+    width: 100%;
+    height: 100%;
+    
+    /* 縦横比を固定 */
+    aspect-ratio: 16 / 9; 
+    
+    /* 💡 最後の確認：positionの競合を完全に排除するため */
+    position: static !important;
+}
+
+        /* セクション共通 */
+        section {
+            margin-bottom: 100px;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            border-bottom: 1px solid #333;
+            margin-bottom: 30px;
+            padding-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: end;
+        }
+
+        /* PROFILE */
+        .profile-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+        
+        .member-info h3 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        .bio-text {
+            grid-column: 1 / -1;
+            font-size: 0.9rem;
+            color: #ccc;
+            margin-top: 20px;
+        }
+
+        /* DISCOGRAPHY */
+        .disco-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 40px;
+        }
+
+        .disco-item {
+            text-align: left;
+        }
+
+        .jacket-placeholder {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            background-color: #333;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #444;
+            color: #666;
+            font-size: 0.8rem;
+        }
+
+        .disco-item h3 {
+            font-size: 1rem;
+            font-weight: bold;
+        }
+
+        .disco-item p {
+            font-size: 0.8rem;
+            color: var(--accent-color);
+        }
+
+        /* SHOWS (Live) */
+        .gig-list {
+            list-style: none;
+        }
+
+        .gig-item {
+            display: grid;
+            grid-template-columns: 120px 1fr auto;
+            padding: 15px 0;
+            border-bottom: 1px solid #222;
+            align-items: center;
+        }
+
+        .date {
+            font-weight: bold;
+        }
+
+        .venue {
+            font-size: 0.95rem;
+        }
+        
+        .venue span {
+            display: block;
+            font-size: 0.8rem;
+            color: #888;
+        }
+
+        .ticket-link {
+            font-size: 0.8rem;
+            border: 1px solid #fff;
+            padding: 5px 15px;
+        }
+        
+        .ticket-link:hover {
+            background-color: #fff;
+            color: #000;
+        }
+
+        /* フッター */
+        footer {
+            border-top: 1px solid #333;
+            padding: 40px 0;
+            text-align: center;
+            font-size: 0.8rem;
+            color: #666;
+        }
+
+       

@@ -1,0 +1,25 @@
+ @media (max-width: 600px) {
+            .logo { font-size: 2.5rem; }
+            .video-wrapper {
+        flex-direction: column; 
+        max-width: 100%;
+        gap: 15px;
+    }
+    .video-wrapper iframe {
+        /* iframeは自動でコンテナ幅いっぱい (100%) に広がる */
+        flex: 1 1 auto; 
+    }
+            .gig-item {
+                grid-template-columns: 1fr;
+                gap: 5px;
+                text-align: center;
+                padding: 20px 0;
+            }
+            .gig-item .ticket-link {
+                margin-top: 10px;
+                display: inline-block;
+            }
+            .profile-content {
+                grid-template-columns: 1fr;
+            }
+        }
